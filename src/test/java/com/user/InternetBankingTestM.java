@@ -6,11 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import objectRepository.ApplyDCTxFlds;
-import objectRepository.CreateAccAttr;
-import objectRepository.IBRegstrtnTxFlds;
-import objectRepository.StaffButtons;
-import objectRepository.TabNames;
+import com.generic.base.BaseClass;
+
+import com.banking.enumFiles.*;
 
 public class InternetBankingTestM extends BaseClass{
 	

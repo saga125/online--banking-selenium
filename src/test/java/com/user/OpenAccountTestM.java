@@ -5,17 +5,16 @@ import java.util.Map;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import com.banking.generic.Misc.UtilityInstanceTransfer;
+import com.banking.reporter.*;
+import com.generic.base.BaseClass;
 
-import objectRepository.CreateAccAttr;
-import objectRepository.StaffButtons;
-import objectRepository.TabNames;
-
+import com.banking.enumFiles.*;
 public class OpenAccountTestM extends BaseClass{
 	@Test(groups = "sanity")
 	public void openAccount() {
 	
 	    //testdata
+		
 		String exptestCaseName = "OpenAccountTest";
 		Map<String, String> map = excelUtility.getData(sheetName, exptestCaseName);
 		report.info(UtilityInstanceTransfer.getExtentTest(),"test data fetched successfully");

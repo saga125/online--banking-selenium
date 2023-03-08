@@ -1,4 +1,4 @@
-package com.banking.generic.Misc;
+package com.banking.reporter;
 
 import com.aventstack.extentreports.ExtentTest;
 

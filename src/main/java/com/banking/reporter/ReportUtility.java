@@ -3,7 +3,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.banking.generic.Misc.UtilityInstanceTransfer;
+import com.banking.reporter.UtilityInstanceTransfer;
 
 public class ReportUtility {
 	private ExtentReports report;

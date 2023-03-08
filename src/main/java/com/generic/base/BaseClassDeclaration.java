@@ -3,18 +3,19 @@ package com.generic.base;
 import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.observer.entity.ReportEntity;
 import com.banking.generic.DropdownUtility;
 import com.banking.generic.ExcelUtility;
 import com.banking.generic.InteractionUtility;
 import com.banking.generic.JavaUtility;
 import com.banking.generic.PopupUtility;
 import com.banking.generic.PropertyUtility;
-import com.banking.generic.ReportUtility;
 import com.banking.generic.SeleniumUtility;
 import com.banking.generic.VerificationUtility;
 import com.banking.generic.WaitUtility;
 
 import com.banking.objectRepository.*;
+import com.banking.reporter.ReportUtility;
 
 
 public class BaseClassDeclaration {
@@ -30,7 +31,7 @@ public class BaseClassDeclaration {
 	protected WaitUtility waitUtility;
 	protected DropdownUtility dropdownUtility;
 	protected InteractionUtility interactionUtility;
-	protected ReportUtility report;
+	public ReportUtility report;
 
 	protected HomePage homePg;
 	protected OpenAccountPage openaccPg;
@@ -54,4 +55,5 @@ public class BaseClassDeclaration {
 	protected String sheetName;
 	protected int randomNumber;
 	public ExtentTest test;
+
 }
