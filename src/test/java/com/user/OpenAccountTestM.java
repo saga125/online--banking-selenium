@@ -13,7 +13,7 @@ public class OpenAccountTestM extends BaseClass{
 	@Test(groups = "sanity")
 	public void openAccount() {
 	
-	    //testdata
+	    //test data
 		
 		String exptestCaseName = "OpenAccountTest";
 		Map<String, String> map = excelUtility.getData(sheetName, exptestCaseName);

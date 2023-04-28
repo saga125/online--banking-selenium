@@ -1,8 +1,9 @@
-package com.banking.generic.Misc;
+package com.banking.listener;
 
 import org.testng.annotations.Test;
 
-import com.banking.generic.ReportUtility;
+import com.banking.reporter.ReportUtility;
+import com.banking.reporter.UtilityInstanceTransfer;
 
 public class ExtentReportPractice {
 	

@@ -8,8 +8,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import testNGBankingSystem.BaseClass;
-import testNGPractice.BaseClass1;
+import com.generic.base.BaseClass;
 
 public class ListenerImplementation implements ITestListener{
 	
@@ -41,7 +40,7 @@ public void onTestFailedWithTimeout(ITestResult result) {
 public void onTestFailure(ITestResult result) {
 	System.out.println("onTestFailure");
 	try {
-		BaseClass1.class.cast(result.getMethod().getInstance()).sUtil.getScreenShot(result.getMethod().getRealClass().getSimpleName(),BaseClass.class.cast(result.getMethod().getInstance()).jsUtil);
+		BaseClass.class.cast(result.getMethod().getInstance()).seleniumUtility.getScreenShot(result.getMethod().getRealClass().getSimpleName(),BaseClass.class.cast(result.getMethod().getInstance()).javaUtility);
 	}catch(IOException e) {
 		e.printStackTrace();
 	}

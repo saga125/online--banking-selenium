@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGBankingSystem.IBChangePasswordTestM">
+      <class name="com.user.PracticeClass">
         <methods>
-          <include name="tearDown"/>
-          <include name="Setup"/>
-          <include name="initiallizationTearDown"/>
-          <include name="ibChangePassword"/>
+          <include name="mothod1"/>
           <include name="initialiationSetUp"/>
+          <include name="methodSetup"/>
+          <include name="initiallizationTearDown"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- testNGBankingSystem.IBChangePasswordTestM -->
+      </class> <!-- com.user.PracticeClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.banking.enumFiles.ExcelSheet;
+import com.banking.enumFiles.PropertyKey;
 import com.banking.generic.DropdownUtility;
 import com.banking.generic.ExcelUtility;
 import com.banking.generic.FrameworkConstants;
@@ -19,10 +21,19 @@ import com.banking.generic.PropertyUtility;
 import com.banking.generic.SeleniumUtility;
 import com.banking.generic.VerificationUtility;
 import com.banking.generic.WaitUtility;
-
-import com.banking.objectRepository.*;
-import com.banking.enumFiles.*;
-import com.banking.listener.*;
+import com.banking.listener.ExtentReportsListener;
+import com.banking.objectRepository.ApplyDebitCardPage;
+import com.banking.objectRepository.ApprovePendingAccountPage;
+import com.banking.objectRepository.ChangePasswordPage;
+import com.banking.objectRepository.CommonPage;
+import com.banking.objectRepository.CustomerIBPage;
+import com.banking.objectRepository.HomePage;
+import com.banking.objectRepository.IBLoginPage;
+import com.banking.objectRepository.IBRegistrationPage;
+import com.banking.objectRepository.OpenAccountPage;
+import com.banking.objectRepository.StaffLoginPage;
+import com.banking.objectRepository.StaffPage;
+import com.banking.objectRepository.ViewActiveCustomerPage;
 
 public class BaseClass extends BaseClassDeclaration{
 	
@@ -85,7 +96,7 @@ public class BaseClass extends BaseClassDeclaration{
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
-		seleniumUtility.closeBrowser();
+		//seleniumUtility.closeBrowser();
 	}
 
 	@AfterClass(alwaysRun = true)

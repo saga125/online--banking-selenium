@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Suite">
-<listeners>
-<listener class-name = "listener.ListenerImplementation"/>
-<listener class-name = "retry.SetTestParameter"/>
-</listeners>
-
-  <test thread-count="5" parallel="tests" name="Test">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
     <classes>
-      <class name="testNGPractice.PracticeClass1"/>
+      <class name="com.user.OpenAccountTestM"/>
+      <class name="com.user.InternetBankingTestM"/>
+      <class name="com.user.IBChangePasswordTestM"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -6,10 +6,13 @@ import java.util.Map;
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebDriver;
 
+import com.banking.enumFiles.ExcelSheet;
+import com.banking.enumFiles.PropertyKey;
+
 public class SelectDateInOrgCalenderTest {
 
 	public static void main(String[] args) throws EncryptedDocumentException, IOException {
-		JavaUtility javaUtility =  new JavaUtility();
+/*		JavaUtility javaUtility =  new JavaUtility();
 		ExcelUtility excelUtility = new ExcelUtility(FrameworkConstants.TEST_EXCEL_FILE_PATH);
 		Map<String, String> testData = excelUtility.getData(ExcelSheet.User.getSheetName(), "OpenAccountTest");
 		javaUtility.consolePrint(testData);
@@ -25,14 +28,13 @@ public class SelectDateInOrgCalenderTest {
 		String url = propertyUtility.getPropertyData(PropertyKey.URL);
 		String username = propertyUtility.getPropertyData(PropertyKey.USERNAME);
 		String password = propertyUtility.getPropertyData(PropertyKey.PASSWORD);
-		
 		WebDriver driver = seleniumUtility.launchBrowser(browser, "");
 		WaitUtility waitUtility = new WaitUtility(driver, timeout);
 		//pre-setting for the browser
 		seleniumUtility.maximizeBrowser();
 		waitUtility.waitForElementLoad(driver, timeout);
 		//navigating the application
-		seleniumUtility.launchApplication(url);
+		seleniumUtility.launchApplication(url);  */
 		
 	}
 

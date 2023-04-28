@@ -8,16 +8,14 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.model.Report;
+import com.banking.enumFiles.PropertyKey;
 import com.banking.generic.FrameworkConstants;
 import com.banking.generic.JavaUtility;
-import com.banking.generic.PropertyKey;
 import com.banking.generic.PropertyUtility;
-import com.banking.generic.ReportUtility;
-import com.banking.generic.Misc.Report;
-import com.banking.generic.Misc.UtilityInstanceTransfer;
-
-import testNGBankingSystem.BaseClass;
+import com.banking.reporter.ReportUtility;
+import com.banking.reporter.UtilityInstanceTransfer;
+import com.generic.base.BaseClass;
 
 public class ExtentReportsListener implements ITestListener, ISuiteListener{
 	private ReportUtility report;
@@ -59,14 +57,14 @@ public class ExtentReportsListener implements ITestListener, ISuiteListener{
 		report.skip(UtilityInstanceTransfer.getExtentTest(),result.getThrowable());
 	}
 
-	@Override
-	public void onTestStart(ITestResult result) {
-		System.out.println("onTestStart");
-		report.createTest(result.getMethod().getMethodName());
-		Report reportAnnotation = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(Report.class);
-		report.addAuthor(UtilityInstanceTransfer.getExtentTest(), reportAnnotation.author());
-		report.addCategory(UtilityInstanceTransfer.getExtentTest(), reportAnnotation.category());
-	}
+//	@Override
+//	public void onTestStart(ITestResult result) {
+//		System.out.println("onTestStart");
+//		report.createTest(result.getMethod().getMethodName());
+//		Report reportAnnotation = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(Report.class);
+//		report.addAuthor(UtilityInstanceTransfer.getExtentTest(), reportAnnotation.author());
+//		report.addCategory(UtilityInstanceTransfer.getExtentTest(), reportAnnotation.category());
+//	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
@@ -89,7 +87,7 @@ public class ExtentReportsListener implements ITestListener, ISuiteListener{
 		if (overrideOrNot.equalsIgnoreCase("no")) {
 			randomName = "_"+new JavaUtility().getCurrentDateTime();
 		}
-		report.init(propertyUtility.getPropertyData(PropertyKey.EXTENTREPORTTITLE)+"ExtentReport"+randomName, propertyUtility.getPropertyData(PropertyKey.EXTENTREPORTNAME), propertyUtility.getPropertyData(PropertyKey.BROWSER));
+		report.init(propertyUtility.getPropertyData(PropertyKey.EXTENTREPORTTITLE)+"ExtentReport"+randomName, propertyUtility.getPropertyData(PropertyKey.EXTENTREPORTNAME), propertyUtility.getPropertyData(PropertyKey.BROWSER), randomName);
 		sreport = report;
 	}
 

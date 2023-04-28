@@ -1,4 +1,4 @@
-package objectRepository;
+package com.banking.objectRepository;
 
 
 import org.openqa.selenium.WebDriver;
