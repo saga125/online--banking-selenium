@@ -44,13 +44,13 @@ public class BaseClass extends BaseClassDeclaration{
 		report = ExtentReportsListener.sreport;
 		javaUtility = new JavaUtility();
 		seleniumUtility = new SeleniumUtility();
-		verificationUtility = new VerificationUtility();
+//		verificationUtility = new VerificationUtility();
 		dropdownUtility = new DropdownUtility();
 		popupUtility = new PopupUtility();
 		proprtyUtlts = new PropertyUtility(FrameworkConstants.TEST_PROPERTY_FILE_PATH);
 		excelUtility = new ExcelUtility(FrameworkConstants.TEST_EXCEL_FILE_PATH);
 		this.browser = browser;
-		if (browser == null || browser.isBlank() || browser.isEmpty() || browser.equals(""))
+		if (browser == null || browser.isEmpty() || browser.equals(""))
 
 			 this.browser =  proprtyUtlts.getPropertyData(PropertyKey.BROWSER);
 		driver = seleniumUtility.launchBrowser(this.browser);
